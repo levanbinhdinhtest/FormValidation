@@ -1,0 +1,97 @@
+:root{
+    --sucess-color: #2691d9;
+    --error-color: #e74c3c;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background: linear-gradient(120deg,#3ca7ee,#9b408f);
+    overflow: hidden;
+    display: flex;
+    /*can chinh item theo chieu ngang, justify*/
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 400px;
+    background: white;
+    border: none;
+    border-radius: 10px;
+    padding: 40px;
+}
+.container h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.control-form {
+    width: 100%;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.control-form input{
+    width: 100%;
+    height: 30px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #333 ;
+}
+
+.control-form span{
+    position: absolute;
+    border-bottom: 3px solid var(--sucess-color);
+    left: 0px;
+    top: 28px;
+    width: 0%;
+    transition: width 0.3s;
+}
+/*~ la nhng the co cung cap*/
+.control-form input:focus ~ span{
+    width: 100%;
+}
+
+.control-form.error small{
+    color: var(--error-color);
+}
+.control-form.error input{
+    border-bottom: 2px solid var(--error-color);
+}
+
+.btn-submit{
+    width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    background: var(--sucess-color);
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition:  0.3s;
+    margin-bottom: 15px;
+}
+.btn-submit:hover{
+    background: #08609a;
+}
+
+.signup-link{
+    text-align: center;
+}
+.signup-link a{
+    text-decoration: none;
+    color: var(--sucess-color);
+   
+}
+.signup-link a:hover{
+    text-decoration: underline;
+
+}
